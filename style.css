@@ -1,0 +1,268 @@
+/* Base styles */
+body {
+    font-family: 'Onest', Arial, sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Fredoka', 'Onest', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1b1b1b;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f54a01;
+}
+
+/* Navbar */
+.pets-nav a.nav-link {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    color: #ffffff !important;
+    transition: color 0.3s;
+}
+
+.pets-nav a.nav-link:hover,
+.pets-nav a.nav-link.active {
+    color: #ffd166 !important;
+}
+
+/* Home  */
+.homepage {
+    min-height: 100vh;
+    background-image: url("../img/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* smaller header for inner pages */
+.homepage.page-top {
+    min-height: auto;
+    padding-bottom: 6rem;
+}
+
+.hero-content {
+    color: #ffffff;
+}
+
+.hero-dog {
+    max-width: 100%;
+    max-height: 520px;
+    animation: fadeUp 1s ease;
+}
+
+.page-banner {
+    animation: fadeUp 1s ease;
+}
+
+/* simple fade animation used on hero */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* images zoom on hover */
+.zoom-img img {
+    transition: transform 0.5s;
+}
+
+.zoom-img:hover img {
+    transform: scale(1.08);
+}
+
+.btn {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-lg {
+    padding: 11px 28px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.oshain-main-nav.fixed-top {
+    background: #000000 !important;
+}
+
+.mt-n6 {
+    margin-top: -6rem;
+    position: relative;
+}
+
+.mb-n8 {
+    margin-bottom: -8rem;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+/* section title */
+.title-bar {
+    width: 60px;
+    height: 6px;
+}
+
+.eyebrow {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #dc3545;
+}
+
+/* cards */
+.category-card,
+.pet-card,
+.service-card,
+.team-card,
+.value-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover,
+.pet-card:hover,
+.service-card:hover,
+.team-card:hover,
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #ffe3e6;
+    color: #dc3545;
+}
+
+/* video */
+.video-frame video {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* shop */
+.quick {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.zoom-img:hover .quick {
+    opacity: 1;
+}
+
+.sale-slide {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+}
+
+.sale-slide.s1 { background: linear-gradient(110deg, #dc3545, #f77f2e); }
+.sale-slide.s2 { background: linear-gradient(110deg, #1d3557, #2f9e8f); }
+.sale-slide.s3 { background: linear-gradient(110deg, #7a5af8, #ef476f); }
+
+/* tabs and pills */
+.pet-pills .nav-link {
+    color: #1b1b1b;
+    background-color: #f4f1ec;
+}
+
+.pet-pills .nav-link.active {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.account-tabs .nav-link {
+    color: #6c757d;
+    border: 0;
+    border-bottom: 3px solid #eeeeee;
+}
+
+.account-tabs .nav-link.active {
+    color: #dc3545;
+    border-bottom-color: #dc3545;
+}
+
+.pawpag .page-link {
+    color: #1b1b1b;
+    border: 0;
+    border-radius: 50px !important;
+    margin: 0 3px;
+}
+
+.pawpag .active .page-link {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* forms */
+.form-control:focus,
+.form-select:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+.form-check-input:checked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.contact-form .form-control:user-invalid {
+    border-color: #dc3545;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #dc3545;
+    background-color: #ffe9ec;
+}
+
+/*---footersection----*/
+
+.bg-footer {
+    background-color: #000000;
+}
+
+footer .top-footer a {
+    color: #ffffff;
+}
+
+footer .top-footer a:hover {
+    color: #f54a01;
+}
+
+.footer-form {
+    background-color: #ffffff;
+}
+
+/* mobile */
+@media (max-width: 991px) {
+    .hero-dog {
+        max-height: 360px;
+    }
+
+    .mt-n6 {
+        margin-top: -4rem;
+    }
+
+    .homepage {
+        min-height: auto;
+    }
+}
