@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop food, toys, beds, clothing and accessories for dogs, cats, rabbits and birds.">
+    <title>Shop | Pawpets</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="top">
+    <div class="homepage page-top">
+        <nav class="navbar navbar-expand-lg pets-nav p-0">
+            <div class="container py-3">
+                <a href="Index.html" class="d-flex align-items-center gap-2 site-brand">
+                    <i class="ri-baidu-line fs-2 text-white"></i>
+                    <div>
+                        <h5 class="fw-bold m-0 text-white">Pawpets</h5>
+                        <small class="text-white-50">pet care</small>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="listing.html" class="nav-link">Listing</a></li><li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="shop.html" class="nav-link active" aria-current="page">Shop</a></li><li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4 ms-lg-4 nav-tools">
+                        <a href="tel:+94740642078" class="text-white d-none d-lg-block">+94 74 064 2078</a>
+                        <a href="login.html" class="text-white nav-icon" aria-label="Account">
+                            <i class="ri-account-circle-line fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container py-5">
+            <div class="page-banner text-white text-center py-4 py-lg-5">
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                    <ol class="breadcrumb mb-3 justify-content-center">
+                        <li class="breadcrumb-item"><a href="Index.html" class="text-white-50">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Shop</li>
+                    </ol>
+                </nav>
+                <h1 class="fw-bold display-3">Pawpets Shop</h1>
+                <p class="lead mb-0 mx-auto" style="max-width:620px">Premium food, toys, beds and accessories for every pet.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sale carousel -->
+    <div class="mt-n6">
+        <div class="container">
+            <div id="saleCarousel" class="carousel slide carousel-fade rounded-5 overflow-hidden shadow-lg" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active sale-slide s1"><div class="p-4 p-lg-5 text-white"><span class="badge text-bg-warning rounded-pill mb-2">Limited offer</span><h2 class="fw-bold display-6">20% off your first order</h2><p class="mb-3">Use code <strong>WOOF20</strong> at checkout.</p><a href="#products" class="btn btn-light rounded-pill px-4">Shop now</a></div></div>
+                    <div class="carousel-item sale-slide s2"><div class="p-4 p-lg-5 text-white"><span class="badge text-bg-warning rounded-pill mb-2">Free delivery</span><h2 class="fw-bold display-6">Free shipping over Rs.10,000</h2><p class="mb-3">Island-wide, delivered in 2&ndash;4 days.</p><a href="#products" class="btn btn-light rounded-pill px-4">Start shopping</a></div></div>
+                    <div class="carousel-item sale-slide s3"><div class="p-4 p-lg-5 text-white"><span class="badge text-bg-warning rounded-pill mb-2">New in</span><h2 class="fw-bold display-6">Fresh arrivals for cats &amp; dogs</h2><p class="mb-3">Discover toys, food and grooming favourites.</p><a href="#products" class="btn btn-light rounded-pill px-4">See what's new</a></div></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#saleCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#saleCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 mt-4" id="products">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Sidebar -->
+                <aside class="col-lg-3">
+                    <form action="#" class="p-4 bg-light rounded-5 sticky-lg-top shop-filter" style="top:90px">
+                        <h5 class="fw-bold mb-3">Search</h5>
+                        <div class="input-group mb-4"><input type="search" class="form-control rounded-start-pill" placeholder="Search products" aria-label="Search"><button class="btn btn-danger rounded-end-pill" type="submit" aria-label="Search"><i class="ri-search-line"></i></button></div>
+                        <h5 class="fw-bold mb-3">Categories</h5>
+                        <div class="list-group list-group-flush mb-4 bg-transparent">
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent d-flex justify-content-between active-cat">All products <span class="badge text-bg-danger rounded-pill">9</span></a>
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent d-flex justify-content-between">Food <span class="badge text-bg-secondary rounded-pill">1</span></a>
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent d-flex justify-content-between">Toys <span class="badge text-bg-secondary rounded-pill">2</span></a>
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent d-flex justify-content-between">Beds &amp; Cats <span class="badge text-bg-secondary rounded-pill">2</span></a>
+                            <a href="#" class="list-group-item list-group-item-action bg-transparent d-flex justify-content-between">Accessories <span class="badge text-bg-secondary rounded-pill">4</span></a>
+                        </div>
+                        <h5 class="fw-bold mb-3">Max price</h5>
+                        <label for="priceRange" class="form-label small text-muted">Up to Rs.7,000</label>
+                        <input type="range" class="form-range mb-4" min="500" max="7000" step="100" value="7000" id="priceRange">
+                        <h5 class="fw-bold mb-3">Pet</h5>
+                        <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Dogs</label></div>
+                        <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="c2" checked><label class="form-check-label" for="c2">Cats</label></div>
+                        <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="c3"><label class="form-check-label" for="c3">Rabbits</label></div>
+                        <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="c4"><label class="form-check-label" for="c4">Birds</label></div>
+                        <button class="btn btn-danger rounded-pill w-100" type="submit">Apply filters</button>
+                    </form>
+                </aside>
+
+                <!-- Products -->
+                <div class="col-lg-9">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                        <p class="mb-0 text-muted">Showing <strong>9</strong> products</p>
+                        <div class="d-flex align-items-center gap-2"><label for="sort" class="small text-muted">Sort by</label>
+                        <select id="sort" class="form-select form-select-sm rounded-pill"><option>Featured</option><option>Price: low to high</option><option>Price: high to low</option><option>Newest</option></select></div>
+                    </div>
+                    <div class="row g-4 g-md-5">
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product1.jpg" class="img-fluid w-100" alt="Cozy Cloud Pet Bed" loading="lazy">
+                                <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute start-0 top-0">New</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv0"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Beds</small>
+                                <h5 class="card-title fw-bold py-1">Cozy Cloud Pet Bed</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.4,500</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv0">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product2.jpg" class="img-fluid w-100" alt="Puppy Polka Dress" loading="lazy">
+                                
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv1"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Clothing</small>
+                                <h5 class="card-title fw-bold py-1">Puppy Polka Dress</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.2,800</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv1">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product3.jpg" class="img-fluid w-100" alt="Stay-Fresh Feeding Bowl" loading="lazy">
+                                <span class="badge text-bg-warning rounded-pill p-2 m-3 position-absolute start-0 top-0">Hot</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv2"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Bowls</small>
+                                <h5 class="card-title fw-bold py-1">Stay-Fresh Feeding Bowl</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.1,900</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv2">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product4.jpg" class="img-fluid w-100" alt="Chew &amp; Play Bone Set" loading="lazy">
+                                
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv3"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Toys</small>
+                                <h5 class="card-title fw-bold py-1">Chew &amp; Play Bone Set</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.1,500</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv3">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product5.jpg" class="img-fluid w-100" alt="Safari Collar &amp; Tag" loading="lazy">
+                                
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv4"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Accessories</small>
+                                <h5 class="card-title fw-bold py-1">Safari Collar &amp; Tag</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.2,200</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv4">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/product6.jpg" class="img-fluid w-100" alt="Kitty Climb Scratch Post" loading="lazy">
+                                <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute start-0 top-0">New</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv5"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Cats</small>
+                                <h5 class="card-title fw-bold py-1">Kitty Climb Scratch Post</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.6,900</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv5">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/new1.jpg" class="img-fluid w-100" alt="Pawpets Premium Dog Food 5kg" loading="lazy">
+                                <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute start-0 top-0">Sale</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv6"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Food</small>
+                                <h5 class="card-title fw-bold py-1">Pawpets Premium Dog Food 5kg</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.3,500 <del class="small fw-normal text-secondary-emphasis">Rs.5,000</del></p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv6">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/new2.jpg" class="img-fluid w-100" alt="Bounce Ball Trio" loading="lazy">
+                                <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute start-0 top-0">Sale</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv7"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Toys</small>
+                                <h5 class="card-title fw-bold py-1">Bounce Ball Trio</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.1,200 <del class="small fw-normal text-secondary-emphasis">Rs.1,800</del></p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv7">View Details</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="card bg-transparent border-0 rounded-0 text-center zoom-img h-100">
+                            <div class="overflow-hidden rounded-5 position-relative">
+                                <img src="../img/new3.jpg" class="img-fluid w-100" alt="Soft-Touch Grooming Brush" loading="lazy">
+                                <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute start-0 top-0">Sale</span>
+                                <button class="btn btn-light btn-sm rounded-pill quick position-absolute bottom-0 start-50 translate-middle-x mb-3" type="button" data-bs-toggle="modal" data-bs-target="#qv8"><i class="ri-eye-line me-1"></i>Quick view</button>
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">Grooming</small>
+                                <h5 class="card-title fw-bold py-1">Soft-Touch Grooming Brush</h5>
+                                <div class="mb-1"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                                <p class="card-text fw-semibold text-danger mb-1">Rs.1,450 <del class="small fw-normal text-secondary-emphasis">Rs.2,000</del></p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0"><button type="button" class="btn btn-danger rounded-pill py-2 px-4" data-bs-toggle="modal" data-bs-target="#qv8">View Details</button></div>
+                        </div>
+                    </div>
+                    </div>
+                    <nav aria-label="Product pages" class="mt-5">
+                        <ul class="pagination justify-content-center pawpag">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6"><i class="ri-truck-line display-5 text-danger"></i><h6 class="fw-bold mt-2">Fast delivery</h6><small class="text-muted">Island-wide shipping</small></div>
+                <div class="col-md-3 col-6"><i class="ri-refund-2-line display-5 text-danger"></i><h6 class="fw-bold mt-2">Easy returns</h6><small class="text-muted">14-day money back</small></div>
+                <div class="col-md-3 col-6"><i class="ri-secure-payment-line display-5 text-danger"></i><h6 class="fw-bold mt-2">Secure payment</h6><small class="text-muted">Cards &amp; cash on delivery</small></div>
+                <div class="col-md-3 col-6"><i class="ri-customer-service-2-line display-5 text-danger"></i><h6 class="fw-bold mt-2">Friendly support</h6><small class="text-muted">7 days a week</small></div>
+            </div>
+        </div>
+    </section>
+
+     <!----News letter updates-->
+
+     <div class="py-0 bg-warning-subtle newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5 py-lg-0">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-lg-6 col-12 py-lg-5">
+                                <div class="text-center text-md-start">
+                                    <div class="mb-4">
+                                        <h1 class="fw-bold text-black">Newsletter Updates</h1>
+                                        <p>Get pet-care tips, new arrivals and exclusive discounts delivered weekly. No spam, just wagging tails.</p>
+                                    </div>
+                                    <form action="#" class="d-grid d-md-flex gap-3">
+                                        <label for="nlEmail" class="visually-hidden">Email address</label>
+                                        <input type="email" id="nlEmail" name="email" class="form-control rounded-pill py-3 px-4 shadow-none border-0" placeholder="email address" required>
+                                        <button class="btn btn-danger rounded-pill py-2 px-5" type="submit">Subscribe</button>
+                                    </form>
+                                    <p class="text-secondary-emphasis pt-3 mb-0">Your privacy is our policy</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-12 d-none d-lg-block align-self-end">
+                                <img src="../img/cat1.png" alt="Grey cat smiling" class="img-fluid mt-n6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!---footer--->
+
+     <footer class="bg-footer text-white">
+        <div class="container py-5 top-footer">
+            <div class="row g-4 py-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="Index.html" class="d-flex align-items-center gap-2 mb-3"><i class="ri-baidu-line fs-2 text-danger"></i><span class="fs-4 fw-bold text-white">Pawpets</span></a>
+                    <p class="text-white-50 small">Everything your furry friend needs for a happy and healthy life &ndash; food, toys, grooming and care in one cosy place.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold pb-3">Categories</h5>
+                    <ul class="list-unstyled d-grid gap-2 text-white-50">
+                        <li><a href="listing.html">Pets</a></li>
+                        <li><a href="shop.html">Food</a></li>
+                        <li><a href="shop.html">Toys</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold pb-3">Contact</h5>
+                    <ul class="list-unstyled d-grid gap-2 text-white-50">
+                        <li><i class="ri-phone-line me-2"></i>Phone: 0740642078</li>
+                        <li><i class="ri-printer-line me-2"></i>Fax: +94-735-763</li>
+                        <li><i class="ri-mail-line me-2"></i>E-mail: Pawpets@gmail.com</li>
+                    </ul>
+                    <h5 class="fw-bold pb-2 pt-3">Opening Hours</h5>
+                    <ul class="list-unstyled d-grid gap-1 text-white-50 small">
+                        <li>Mon - Fri : 10am - 8pm</li>
+                        <li>Sat : 10am - 8pm</li>
+                        <li>Sun : 10am - 6pm</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-12 ps-lg-5">
+                    <div class="mb-4">
+                        <h5 class="fw-bold pb-3">Sign up for our newsletter</h5>
+                        <p class="text-white-50">Tips, offers and cute pet stories &ndash; straight to your inbox.</p>
+                    </div>
+                    <form action="#" class="d-flex overflow-hidden rounded-pill footer-form">
+                        <label for="footerEmail" class="visually-hidden">Email address</label>
+                        <input type="email" class="form-control border-0 rounded-0 py-2 px-4" placeholder="Enter Email Address" name="email" id="footerEmail" required>
+                        <button class="btn btn-danger rounded-0 px-4" type="submit" aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="border-top border-secondary py-3 text-center small text-white-50">&copy; 2026 Pawpets. All rights reserved. Made with <i class="ri--fill text-danger"></i> for pets.</div>
+     </footer>
+    <div class="modal fade" id="qv0" tabindex="-1" aria-labelledby="qv0l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product1.jpg" class="w-100" alt="Cozy Cloud Pet Bed"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Beds</small>
+                        <h4 class="fw-bold" id="qv0l">Cozy Cloud Pet Bed</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.4,500</p>
+                        <p class="text-muted">Ultra-soft, machine-washable bed with raised cushioned rim. Perfect for dogs and cats up to 15kg.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv1" tabindex="-1" aria-labelledby="qv1l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product2.jpg" class="w-100" alt="Puppy Polka Dress"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Clothing</small>
+                        <h4 class="fw-bold" id="qv1l">Puppy Polka Dress</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.2,800</p>
+                        <p class="text-muted">Breathable cotton dress with cute polka dots. Available from XS to L.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv2" tabindex="-1" aria-labelledby="qv2l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product3.jpg" class="w-100" alt="Stay-Fresh Feeding Bowl"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Bowls</small>
+                        <h4 class="fw-bold" id="qv2l">Stay-Fresh Feeding Bowl</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.1,900</p>
+                        <p class="text-muted">Non-slip stainless steel bowl with a food-safe silicone base that is easy to clean.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv3" tabindex="-1" aria-labelledby="qv3l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product4.jpg" class="w-100" alt="Chew &amp; Play Bone Set"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Toys</small>
+                        <h4 class="fw-bold" id="qv3l">Chew &amp; Play Bone Set</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.1,500</p>
+                        <p class="text-muted">Durable chew bone and rope ball set that keeps teeth clean and tails wagging.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv4" tabindex="-1" aria-labelledby="qv4l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product5.jpg" class="w-100" alt="Safari Collar &amp; Tag"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Accessories</small>
+                        <h4 class="fw-bold" id="qv4l">Safari Collar &amp; Tag</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.2,200</p>
+                        <p class="text-muted">Adjustable nylon collar with an engraved gold paw tag. Reflective stitching for night walks.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv5" tabindex="-1" aria-labelledby="qv5l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/product6.jpg" class="w-100" alt="Kitty Climb Scratch Post"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Cats</small>
+                        <h4 class="fw-bold" id="qv5l">Kitty Climb Scratch Post</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.6,900</p>
+                        <p class="text-muted">Sisal-wrapped scratching post with a cosy perch and a dangling toy for playful cats.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv6" tabindex="-1" aria-labelledby="qv6l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/new1.jpg" class="w-100" alt="Pawpets Premium Dog Food 5kg"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Food</small>
+                        <h4 class="fw-bold" id="qv6l">Pawpets Premium Dog Food 5kg</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.3,500</p>
+                        <p class="text-muted">Protein-rich recipe with real chicken, brown rice and vitamins for adult dogs.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv7" tabindex="-1" aria-labelledby="qv7l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/new2.jpg" class="w-100" alt="Bounce Ball Trio"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Toys</small>
+                        <h4 class="fw-bold" id="qv7l">Bounce Ball Trio</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.1,200</p>
+                        <p class="text-muted">Three high-bounce, non-toxic balls in bright colours for fetch and fun.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qv8" tabindex="-1" aria-labelledby="qv8l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6"><img src="../img/new3.jpg" class="w-100" alt="Soft-Touch Grooming Brush"></div>
+                    <div class="col-md-6 p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <small class="text-muted">Grooming</small>
+                        <h4 class="fw-bold" id="qv8l">Soft-Touch Grooming Brush</h4>
+                        <div class="mb-2"><span class="text-warning small"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i></span></div>
+                        <p class="fs-4 fw-semibold text-danger">Rs.1,450</p>
+                        <p class="text-muted">Self-cleaning slicker brush that removes loose fur and tangles gently.</p>
+                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">Enquire to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse adoptable dogs, cats, rabbits and birds, plus Pawpets grooming, boarding, vet and training services.">
+    <title>Pet Listing | Pawpets</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="top">
+    <div class="homepage page-top">
+        <nav class="navbar navbar-expand-lg pets-nav p-0">
+            <div class="container py-3">
+                <a href="Index.html" class="d-flex align-items-center gap-2 site-brand">
+                    <i class="ri-baidu-line fs-2 text-white"></i>
+                    <div>
+                        <h5 class="fw-bold m-0 text-white">Pawpets</h5>
+                        <small class="text-white-50">pet care</small>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler bg-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="listing.html" class="nav-link active" aria-current="page">Listing</a></li><li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li><li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4 ms-lg-4 nav-tools">
+                        <a href="tel:+94740642078" class="text-white d-none d-lg-block">+94 74 064 2078</a>
+                        <a href="login.html" class="text-white nav-icon" aria-label="Account">
+                            <i class="ri-account-circle-line fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container py-5">
+            <div class="page-banner text-white text-center py-4 py-lg-5">
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                    <ol class="breadcrumb mb-3 justify-content-center">
+                        <li class="breadcrumb-item"><a href="Index.html" class="text-white-50">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Listing</li>
+                    </ol>
+                </nav>
+                <h1 class="fw-bold display-3">Find Your New Best Friend</h1>
+                <p class="lead mb-0 mx-auto" style="max-width:620px">Meet our adorable pets looking for loving homes, and explore the care services we offer.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Search form -->
+    <div class="mt-n6">
+        <div class="container">
+            <form action="#" class="bg-white shadow-lg rounded-5 p-4 p-lg-5 search-box">
+                <div class="row g-3 align-items-end">
+                    <div class="col-lg-3 col-md-6">
+                        <label for="fType" class="form-label fw-semibold">Pet type</label>
+                        <select id="fType" class="form-select rounded-pill"><option>Any</option><option>Dogs</option><option>Cats</option><option>Rabbits</option><option>Birds</option></select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label for="fAge" class="form-label fw-semibold">Age</label>
+                        <select id="fAge" class="form-select rounded-pill"><option>Any</option><option>Under 1 year</option><option>1 - 3 years</option><option>3+ years</option></select>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <label for="fCity" class="form-label fw-semibold">Location</label>
+                        <input id="fCity" type="text" class="form-control rounded-pill" placeholder="e.g. Colombo" list="cities">
+                        <datalist id="cities"><option value="Colombo"></option><option value="Kandy"></option><option value="Galle"></option><option value="Negombo"></option></datalist>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-grid">
+                        <button class="btn btn-danger rounded-pill py-2" type="submit"><i class="ri-search-line me-1"></i>Search pets</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pets -->
+    <section class="py-5 mt-4">
+        <div class="container py-4">
+            <div class="row mb-5">
+                <div class="col-lg-6 col-12 mx-auto">
+                    <div class="text-center">
+                        <p class="text-secondary-emphasis mb-2 fw-normal text-uppercase eyebrow">Adopt, don't shop</p>
+                        <h1 class="fw-bold display-5">Pets Looking for Love</h1>
+                        
+                        <span class="bg-danger mx-auto d-block rounded-pill title-bar"></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-pills justify-content-center gap-2 mb-5 pet-pills" id="petTabs" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#p-all" type="button" role="tab">All</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#p-dogs" type="button" role="tab">Dogs</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#p-cats" type="button" role="tab">Cats</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#p-rabbits" type="button" role="tab">Rabbits</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#p-birds" type="button" role="tab">Birds</button></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="p-all" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-dog1.jpg" class="card-img-top" alt="Biscuit the Golden Retriever" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Biscuit</h5>
+                                    <p class="text-muted small mb-2">Golden Retriever</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-biscuit">Meet Biscuit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-dog2.jpg" class="card-img-top" alt="Shadow the Shih Tzu mix" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Shadow</h5>
+                                    <p class="text-muted small mb-2">Shih Tzu mix</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Kandy</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-shadow">Meet Shadow</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-cat1.jpg" class="card-img-top" alt="Mimi the British Shorthair" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Mimi</h5>
+                                    <p class="text-muted small mb-2">British Shorthair</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">3 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Galle</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-mimi">Meet Mimi</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-cat2.jpg" class="card-img-top" alt="Ginger the Orange Tabby" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Ginger</h5>
+                                    <p class="text-muted small mb-2">Orange Tabby</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">8 mths</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-ginger">Meet Ginger</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-rabbit1.jpg" class="card-img-top" alt="Snowy the Holland Lop" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Snowy</h5>
+                                    <p class="text-muted small mb-2">Holland Lop</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Negombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-snowy">Meet Snowy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-rabbit2.jpg" class="card-img-top" alt="Cocoa the Dutch Rabbit" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Cocoa</h5>
+                                    <p class="text-muted small mb-2">Dutch Rabbit</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-cocoa">Meet Cocoa</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-bird1.jpg" class="card-img-top" alt="Skye the Budgerigar" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Skye</h5>
+                                    <p class="text-muted small mb-2">Budgerigar</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Kandy</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-skye">Meet Skye</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-bird2.jpg" class="card-img-top" alt="Kiwi the Lovebird" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Kiwi</h5>
+                                    <p class="text-muted small mb-2">Lovebird</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Galle</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-kiwi">Meet Kiwi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="p-dogs" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-dog1.jpg" class="card-img-top" alt="Biscuit the Golden Retriever" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Biscuit</h5>
+                                    <p class="text-muted small mb-2">Golden Retriever</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-biscuit">Meet Biscuit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-dog2.jpg" class="card-img-top" alt="Shadow the Shih Tzu mix" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Shadow</h5>
+                                    <p class="text-muted small mb-2">Shih Tzu mix</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Kandy</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-shadow">Meet Shadow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="p-cats" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-cat1.jpg" class="card-img-top" alt="Mimi the British Shorthair" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Mimi</h5>
+                                    <p class="text-muted small mb-2">British Shorthair</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">3 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Galle</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-mimi">Meet Mimi</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-cat2.jpg" class="card-img-top" alt="Ginger the Orange Tabby" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Ginger</h5>
+                                    <p class="text-muted small mb-2">Orange Tabby</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">8 mths</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-ginger">Meet Ginger</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="p-rabbits" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-rabbit1.jpg" class="card-img-top" alt="Snowy the Holland Lop" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Snowy</h5>
+                                    <p class="text-muted small mb-2">Holland Lop</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Negombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-snowy">Meet Snowy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-rabbit2.jpg" class="card-img-top" alt="Cocoa the Dutch Rabbit" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Cocoa</h5>
+                                    <p class="text-muted small mb-2">Dutch Rabbit</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Colombo</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-cocoa">Meet Cocoa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="p-birds" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-bird1.jpg" class="card-img-top" alt="Skye the Budgerigar" loading="lazy">
+                                    <span class="badge text-bg-danger rounded-pill p-2 m-3 position-absolute top-0 start-0">New</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Skye</h5>
+                                    <p class="text-muted small mb-2">Budgerigar</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">1 yr</span>
+                                        <span class="badge rounded-pill text-bg-light border">Female</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Kandy</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-skye">Meet Skye</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card border-0 shadow-sm rounded-5 h-100 overflow-hidden pet-card">
+                                <div class="overflow-hidden position-relative">
+                                    <img src="../img/pet-bird2.jpg" class="card-img-top" alt="Kiwi the Lovebird" loading="lazy">
+                                    <span class="badge text-bg-success rounded-pill p-2 m-3 position-absolute top-0 start-0">Adoptable</span>
+                                    <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3" type="button" aria-label="Favourite"><i class="ri--3-line text-danger"></i></button>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1">Kiwi</h5>
+                                    <p class="text-muted small mb-2">Lovebird</p>
+                                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
+                                        <span class="badge rounded-pill text-bg-light border">2 yrs</span>
+                                        <span class="badge rounded-pill text-bg-light border">Male</span>
+                                        <span class="badge rounded-pill text-bg-light border"><i class="ri-map-pin-line"></i> Galle</span>
+                                    </div>
+                                    <button class="btn btn-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#meet-kiwi">Meet Kiwi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Pet pages" class="mt-5">
+                <ul class="pagination justify-content-center pawpag">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row mb-5">
+                <div class="col-lg-6 col-12 mx-auto">
+                    <div class="text-center">
+                        <p class="text-secondary-emphasis mb-2 fw-normal text-uppercase eyebrow">Care for every pet</p>
+                        <h1 class="fw-bold display-5">Our Services</h1>
+                        <p class="text-muted mb-3">Professional, loving care from the Pawpets team.</p>
+                        <span class="bg-danger mx-auto d-block rounded-pill title-bar"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow rounded-5 h-100 overflow-hidden zoom-img service-card">
+                        <div class="overflow-hidden"><img src="../img/service-grooming.jpg" class="card-img-top" alt="Grooming" loading="lazy"></div>
+                        <div class="card-body">
+                            <h5 class="fw-bold"><i class="ri-scissors-2-line text-danger me-2"></i>Grooming</h5>
+                            <ul class="list-unstyled small text-muted mb-3"><li><i class="ri-check-line text-danger me-1"></i>Bath &amp; blow-dry</li><li><i class="ri-check-line text-danger me-1"></i>Nail trim &amp; ear clean</li><li><i class="ri-check-line text-danger me-1"></i>Breed-style haircut</li></ul>
+                            <span class="badge text-bg-danger rounded-pill">From Rs.2,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow rounded-5 h-100 overflow-hidden zoom-img service-card">
+                        <div class="overflow-hidden"><img src="../img/service-boarding.jpg" class="card-img-top" alt="Boarding" loading="lazy"></div>
+                        <div class="card-body">
+                            <h5 class="fw-bold"><i class="ri-home--line text-danger me-2"></i>Boarding</h5>
+                            <ul class="list-unstyled small text-muted mb-3"><li><i class="ri-check-line text-danger me-1"></i>Climate-controlled suites</li><li><i class="ri-check-line text-danger me-1"></i>Daily play &amp; walks</li><li><i class="ri-check-line text-danger me-1"></i>Photo updates for owners</li></ul>
+                            <span class="badge text-bg-danger rounded-pill">From Rs.1,800 / night</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow rounded-5 h-100 overflow-hidden zoom-img service-card">
+                        <div class="overflow-hidden"><img src="../img/service-vet.jpg" class="card-img-top" alt="Vet Care" loading="lazy"></div>
+                        <div class="card-body">
+                            <h5 class="fw-bold"><i class="ri-stethoscope-line text-danger me-2"></i>Vet Care</h5>
+                            <ul class="list-unstyled small text-muted mb-3"><li><i class="ri-check-line text-danger me-1"></i>Wellness check-ups</li><li><i class="ri-check-line text-danger me-1"></i>Vaccinations</li><li><i class="ri-check-line text-danger me-1"></i>Dental &amp; minor surgery</li></ul>
+                            <span class="badge text-bg-danger rounded-pill">From Rs.3,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow rounded-5 h-100 overflow-hidden zoom-img service-card">
+                        <div class="overflow-hidden"><img src="../img/service-training.jpg" class="card-img-top" alt="Training" loading="lazy"></div>
+                        <div class="card-body">
+                            <h5 class="fw-bold"><i class="ri-medal-line text-danger me-2"></i>Training</h5>
+                            <ul class="list-unstyled small text-muted mb-3"><li><i class="ri-check-line text-danger me-1"></i>Puppy basics</li><li><i class="ri-check-line text-danger me-1"></i>Obedience classes</li><li><i class="ri-check-line text-danger me-1"></i>Behaviour support</li></ul>
+                            <span class="badge text-bg-danger rounded-pill">From Rs.4,500 / 4 wks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a href="contact.html" class="btn btn-danger btn-lg rounded-pill">Book an appointment</a></div>
+        </div>
+    </section>
+
+     <!----News letter updates-->
+
+     <div class="py-0 bg-warning-subtle newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5 py-lg-0">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-lg-6 col-12 py-lg-5">
+                                <div class="text-center text-md-start">
+                                    <div class="mb-4">
+                                        <h1 class="fw-bold text-black">Newsletter Updates</h1>
+                                        <p>Get pet-care tips, new arrivals and exclusive discounts delivered weekly. No spam, just wagging tails.</p>
+                                    </div>
+                                    <form action="#" class="d-grid d-md-flex gap-3">
+                                        <label for="nlEmail" class="visually-hidden">Email address</label>
+                                        <input type="email" id="nlEmail" name="email" class="form-control rounded-pill py-3 px-4 shadow-none border-0" placeholder="email address" required>
+                                        <button class="btn btn-danger rounded-pill py-2 px-5" type="submit">Subscribe</button>
+                                    </form>
+                                    <p class="text-secondary-emphasis pt-3 mb-0">Your privacy is our policy</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-12 d-none d-lg-block align-self-end">
+                                <img src="../img/cat1.png" alt="Grey cat smiling" class="img-fluid mt-n6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!---footer--->
+
+     <footer class="bg-footer text-white">
+        <div class="container py-5 top-footer">
+            <div class="row g-4 py-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="Index.html" class="d-flex align-items-center gap-2 mb-3"><i class="ri-baidu-line fs-2 text-danger"></i><span class="fs-4 fw-bold text-white">Pawpets</span></a>
+                    <p class="text-white-50 small">Everything your furry friend needs for a happy and healthy life &ndash; food, toys, grooming and care in one cosy place.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold pb-3">Categories</h5>
+                    <ul class="list-unstyled d-grid gap-2 text-white-50">
+                        <li><a href="listing.html">Pets</a></li>
+                        <li><a href="shop.html">Food</a></li>
+                        <li><a href="shop.html">Toys</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold pb-3">Contact</h5>
+                    <ul class="list-unstyled d-grid gap-2 text-white-50">
+                        <li><i class="ri-phone-line me-2"></i>Phone: 0740642078</li>
+                        <li><i class="ri-printer-line me-2"></i>Fax: +94-735-763</li>
+                        <li><i class="ri-mail-line me-2"></i>E-mail: Pawpets@gmail.com</li>
+                    </ul>
+                    <h5 class="fw-bold pb-2 pt-3">Opening Hours</h5>
+                    <ul class="list-unstyled d-grid gap-1 text-white-50 small">
+                        <li>Mon - Fri : 10am - 8pm</li>
+                        <li>Sat : 10am - 8pm</li>
+                        <li>Sun : 10am - 6pm</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-12 ps-lg-5">
+                    <div class="mb-4">
+                        <h5 class="fw-bold pb-3">Sign up for our newsletter</h5>
+                        <p class="text-white-50">Tips, offers and cute pet stories &ndash; straight to your inbox.</p>
+                    </div>
+                    <form action="#" class="d-flex overflow-hidden rounded-pill footer-form">
+                        <label for="footerEmail" class="visually-hidden">Email address</label>
+                        <input type="email" class="form-control border-0 rounded-0 py-2 px-4" placeholder="Enter Email Address" name="email" id="footerEmail" required>
+                        <button class="btn btn-danger rounded-0 px-4" type="submit" aria-label="Subscribe"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="border-top border-secondary py-3 text-center small text-white-50">&copy; 2026 Pawpets. All rights reserved. Made with <i class="ri--fill text-danger"></i> for pets.</div>
+     </footer>
+    <div class="modal fade" id="meet-biscuit" tabindex="-1" aria-labelledby="meet-biscuit-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-dog1.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Biscuit"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-biscuit-l">Meet Biscuit</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Friendly, playful and great with kids. Loves fetch and belly rubs.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-biscuit">Your name</label><input type="text" id="mn-biscuit" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-biscuit">Email</label><input type="email" id="me-biscuit" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-biscuit">Message</label><textarea id="mm-biscuit" rows="2" class="form-control rounded-4" placeholder="I would love to meet Biscuit!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-shadow" tabindex="-1" aria-labelledby="meet-shadow-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-dog2.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Shadow"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-shadow-l">Meet Shadow</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Gentle and curious. Already house-trained and learning basic commands.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-shadow">Your name</label><input type="text" id="mn-shadow" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-shadow">Email</label><input type="email" id="me-shadow" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-shadow">Message</label><textarea id="mm-shadow" rows="2" class="form-control rounded-4" placeholder="I would love to meet Shadow!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-mimi" tabindex="-1" aria-labelledby="meet-mimi-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-cat1.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Mimi"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-mimi-l">Meet Mimi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Calm lap cat who loves window watching and quiet evenings.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-mimi">Your name</label><input type="text" id="mn-mimi" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-mimi">Email</label><input type="email" id="me-mimi" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-mimi">Message</label><textarea id="mm-mimi" rows="2" class="form-control rounded-4" placeholder="I would love to meet Mimi!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-ginger" tabindex="-1" aria-labelledby="meet-ginger-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-cat2.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Ginger"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-ginger-l">Meet Ginger</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Energetic kitten with a passion for string toys and zoomies.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-ginger">Your name</label><input type="text" id="mn-ginger" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-ginger">Email</label><input type="email" id="me-ginger" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-ginger">Message</label><textarea id="mm-ginger" rows="2" class="form-control rounded-4" placeholder="I would love to meet Ginger!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-snowy" tabindex="-1" aria-labelledby="meet-snowy-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-rabbit1.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Snowy"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-snowy-l">Meet Snowy</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Sweet, soft and sociable. Enjoys fresh greens and gentle cuddles.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-snowy">Your name</label><input type="text" id="mn-snowy" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-snowy">Email</label><input type="email" id="me-snowy" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-snowy">Message</label><textarea id="mm-snowy" rows="2" class="form-control rounded-4" placeholder="I would love to meet Snowy!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-cocoa" tabindex="-1" aria-labelledby="meet-cocoa-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-rabbit2.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Cocoa"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-cocoa-l">Meet Cocoa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Calm and chilled. Does best with a quiet, rabbit-savvy family.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-cocoa">Your name</label><input type="text" id="mn-cocoa" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-cocoa">Email</label><input type="email" id="me-cocoa" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-cocoa">Message</label><textarea id="mm-cocoa" rows="2" class="form-control rounded-4" placeholder="I would love to meet Cocoa!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-skye" tabindex="-1" aria-labelledby="meet-skye-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-bird1.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Skye"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-skye-l">Meet Skye</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Chatty little budgie who loves mirrors, music and millet.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-skye">Your name</label><input type="text" id="mn-skye" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-skye">Email</label><input type="email" id="me-skye" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-skye">Message</label><textarea id="mm-skye" rows="2" class="form-control rounded-4" placeholder="I would love to meet Skye!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="meet-kiwi" tabindex="-1" aria-labelledby="meet-kiwi-l" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="../img/pet-bird2.jpg" class="w-100 h-100" style="object-fit:cover;min-height:220px" alt="Kiwi"></div>
+                    <div class="col-md-7">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="meet-kiwi-l">Meet Kiwi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <p class="text-muted">Cheerful and bonded to people. Needs a spacious cage and daily out-of-cage time.</p>
+                            <form action="#">
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="mn-kiwi">Your name</label><input type="text" id="mn-kiwi" class="form-control rounded-pill" required></div>
+                                <div class="mb-2"><label class="form-label small fw-semibold" for="me-kiwi">Email</label><input type="email" id="me-kiwi" class="form-control rounded-pill" required></div>
+                                <div class="mb-3"><label class="form-label small fw-semibold" for="mm-kiwi">Message</label><textarea id="mm-kiwi" rows="2" class="form-control rounded-4" placeholder="I would love to meet Kiwi!"></textarea></div>
+                                <button class="btn btn-danger rounded-pill w-100" type="submit">Send enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
